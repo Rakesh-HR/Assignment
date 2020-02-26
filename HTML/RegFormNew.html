@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <title>GE Healthcare Registration</title>
+    <link href="../Stylesheets/RegFormNew.css" rel="stylesheet"> 
+    <script src="../Scriptsheets/RegFormNew.js" ></script>
+
+    <header>
+        <div class="logo">
+            <a href="../HTML/RegFormNew.html"><img src="https://www.gehealthcare.com/-/jssmedia/6d5b64dcd4e44ad785909b3ab0d4b6c0.svg?la=en-US" alt="GE Logo" style="margin-left: 100px; margin-right: 100px;" id="img"></a>
+        </div>
+
+        <div class="toggle-content">
+            <label for="toggle">
+                <img src="../Images/more.png" alt="more icon">
+            </label>
+        </div>
+
+        <input type="checkbox" id="toggle">
+        <nav class="navbar" style=" font-family:GE Inspira Sans;">
+            <a href="">About Us</a>
+            <a href="../HTML/page2.html">Products</a>
+            <a href="">Shops</a>
+            <a href="">Insights</a>
+        </nav>
+    </header>
+
+    <body>
+        <div>
+            <form  oncopy="return false" oncut="return false" onpaste="return false"  style="margin: 20px 80px 20px 100px; font-family:GE Inspira Sans;">
+                <p style="font-size:xx-large; color: royalblue;">Register for MyGEHealthcare</p>
+                <p style="font-size:x-large; ">Get easy access to training and education, track your order status, view your invoices, place order for parts and accessories and much more!</p >
+                <div class ="allignCol">
+                    <div class="regAllignment" >
+                        <label id="nameA">Enter  your Name</label><br>
+                        <input type="text" name="fn" id="name" maxlength="40" title="Enter your Name" placeholder=" Enter your Name" onblur="nameCheck()" required/>
+                        <br><label id="nameAlert" class="alertLabels" > </label>
+                    </div>
+                    <div  class="regAllignment" >
+                        <label id="emailA" > Enter your Email</label><br>
+                        <input type="Email" placeholder=" Enter your Email" id="email" onblur="mailCheck()" required/>
+                        <br><label id="emailAlert" class="alertLabels" > </label>
+                    </div > 
+                    <div class="regAllignment" >
+                        <label id="numberA">Enter your Mobile</label><br>
+                        <input type="Number" placeholder=" Enter your Ph. No" id="phno" onblur="phNoCheck()" required/>
+                        <br><label id="numberAlert" class="alertLabels" > </label>
+                    </div>
+                    <div class="regAllignment" >
+                        <label id="ageA">Enter your Age</label><br>
+                        <input type="Number" placeholder=" Enter your Age" id ="age" onblur="ageCheck()"  required/>
+                        <br><label id="ageAlert" class="alertLabels" > </label>
+                    </div>
+                    <div class="regAllignment" >
+                        <label id="p1A">Enter your Password</label><br>
+                        <input type="password" placeholder=" Enter your Password" id ="psswrd1" onblur="psswrd1Check()"  required/>
+                        <br><label id="p1Alert" class="alertLabels" > </label>
+                    </div>                        
+                    <div class="regAllignment" >
+                        <label id="p2A">Enter your Password Again</label><br>
+                        <input type="password" placeholder=" Enter your Password again" id ="psswrd2" onblur="psswrd2Check()"  required/>
+                        <br><label id="p2Alert" class="alertLabels" > </label>
+                    </div>
+                </div>
+
+                <div lass ="allignCol">     
+                    <div class="regAllignment">
+                        <span ><b>Your password must:></span><br>
+                        <span><b>&check;</b>  Be at least 8 characters in length.</span><br>
+                        <span><b>&check;</b>  Contain at least 1 lowercase and 1 uppercase letter.</span><br>
+                        <span><b>&check;</b>  Contain at least 1 special character (!@#$%^&*)</span><br>
+                        <span><b>&check;</b>  Contain at least 1 number (0–9)</span>
+                    </div>
+                </div> 
+                <br>
+
+                <div class ="allignCol">
+                    <div class="regAllignment" >
+                        <label id="addr1L">Enter your Address</label><br>
+                        <input type="text" id="addr1" maxlength="40" title="Enter your Adderss" placeholder=" Address line 1" onblur="addrCheck('addr1')" required/>                        
+                        <br><label id="addr1A" class="alertLabels" > </label>
+                    </div>
+                    <div class="regAllignment" >
+                        <label id="addr2L">Enter your Address</label><br>
+                        <input type="text" id="addr2" maxlength="40" title="Enter your Adderss" placeholder=" Address line 2" onblur="addrCheck('addr2')" required/>                        
+                        <br><label id="addr2A" class="alertLabels" > </label>
+                    </div>
+                    <div class="regAllignment" >
+                        <label id="addr3L">Enter your Address</label><br>
+                        <input type="text" id="addr3" maxlength="40" title="Enter your Adderss" placeholder=" Address line 3" onblur="addrCheck('addr3')" required/>                        
+                        <br><label id="addr3A" class="alertLabels" > </label>
+                    </div>
+                </div>
+                <br>
+
+                <div class ="allignCol">
+                    <div class="regAllignment" >
+                        <label id="countryL">Choose your Country</label><br>
+                        <select id="selectCountry" onchange="stateSel()" >
+                            <option>Select Country</option>
+                        </select>                        
+                        <br><label id="countryA" class="alertLabels" > </label>
+                    </div>
+                    <div class="regAllignment" >
+                        <label id="stateL">Choose your State</label><br>
+                        <select id="selectState" onchange="citySel()" >
+                            <option>Select State</option>
+                        </select>                        
+                        <br><label id="stateA" class="alertLabels" > </label>
+                    </div>
+                    <div class="regAllignment" >
+                        <label id="cityL">Choose your City</label><br>
+                        <select id="selectCity" >
+                            <option>Select City</option>
+                        </select>                        
+                        <br><label id="cityA" class="alertLabels" > </label>
+                    </div>     
+                </div>
+                <br>
+
+                <div class ="allignCol">               
+                    <div class="regAllignment" >
+                        <label id="pinNoL">Enter your Pincode</label><br>
+                        <input type="Number" placeholder=" Enter your Pincode" id="pinNo" onblur="pinNoCheck()" required/>
+                        <br><label id="pinNoA" class="alertLabels" > </label>
+                    </div>
+                </div>
+                <br>
+
+                <div class="regAllignment">
+                        <input class="buttonStyle" type="button" value="Submit" id="buttonNext" onclick="submitValidator()" />
+                </div>      
+
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <label style="width: 100%; font-size: larger;">Thank You for Registering</label>
+                        <br><br>
+                        <label id="finalText1">..</label>
+                        <br><br>
+                        <label id="finalText2">..</label>
+                        <br><br>
+                        <input type="submit" class="buttonStyle" value="Next" id="nextPage" onclick="jump()"/>                
+    
+                    </div>
+                </div>    
+            </form>
+
+        </div>
+    </body>
+    
+    <footer >
+        <nav>
+            <a href="">Contact Us</a>
+            <span class="cpy">&copy2020 General Electric</span>
+            <a href="">Privacy Policy</a> 
+            <a href="">Terms and Conditions</a>
+            <a href="">Security</a> 
+            <a href="">Privacy Shield</a>   
+        </nav>
+    </footer>
+
+</html>

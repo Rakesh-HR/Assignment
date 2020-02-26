@@ -1,0 +1,95 @@
+ 
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  .column {
+    flex: 50%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+  
+  .btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+
+  #more {display: none;}
+
+  .column div{
+    padding: 10px 10px 10px 10px;
+    margin: 20px 10px 10px 10px;
+      border: black .75px solid;
+      border-radius: 10px;
+      box-shadow:5px 5px 5px 5px rgba(0,0,0,0.3);
+    }
+
+    .footerStyle2{
+        bottom: 0px; 
+        font-size: large; 
+        text-align: center; 
+        width: 100px;;
+        border-top: 1px solid black; 
+        width: 99%;
+    }
+
+    .column div img{
+        border: rgba(0, 0, 0, 0.5) 1px solid;
+    }
+
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+    
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }

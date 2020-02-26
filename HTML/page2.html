@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <title>GE Healthcare Registration</title>
+    <link href="../Stylesheets/RegFormNew.css" rel="stylesheet"> 
+    
+    <link href="../Stylesheets/page2.css" rel="stylesheet"> 
+    <script src="../Scriptsheets/page2.js" ></script>
+
+    <header>
+        <div class="logo">
+            <a href="../HTML/RegFormNew.html"><img src="https://www.gehealthcare.com/-/jssmedia/6d5b64dcd4e44ad785909b3ab0d4b6c0.svg?la=en-US" alt="GE Logo" style="margin-left: 100px; margin-right: 100px;" id="img"></a>
+        </div>
+
+        <div class="toggle-content">
+            <label for="toggle">
+                <img src="../Images/more.png" alt="more icon">
+            </label>
+        </div>
+
+        <input type="checkbox" id="toggle">
+        <nav class="navbar">
+            <a href="" style="width: 0px;" id="spacer"></a>
+            <a href="">About Us</a>
+            <a href="../HTML/page2.html">Products</a>
+            <a href="">Shops</a>
+            <a href="">Insights</a>
+        </nav>
+    </header>
+
+    <body>
+        
+        <div style="padding-top: 5px;">
+            <label style="padding: 20px 10px 10px 20px; font-size: larger;">Choose the required layout : </label>
+            <button class="btn" onclick="one()">1</button>
+            <button class="btn" onclick="two()">2</button>
+            <button class="btn" onclick="three()">3</button>
+            <button class="btn" onclick="six()">6</button>
+        </div >
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <label id="pId">..</label>
+            </div>
+        </div>
+        
+        <div class="row"> 
+            <div class="column">
+               <div>
+                   <img src="../Images/1.jpg" style="width:100%">
+                   <h3>Ventilators</h3> 
+                   <p>Patient connections, filters, masks, and more to help ensure clinical safety and<span id="dots1">...</span><span id="more1" style="display: none;"> accuracy. Amsorb® Plus CO2 absorbent and absorbers from GE Healthcare are tested and verified to function with compatible GE anesthesia machines. The products perform optimally in removal of CO2 from the breathing system while offering significant benefits to the patient, environment and clinical operators.</span></p>
+                   <button onclick="myFunction('dots1','more1','myBtn1')" id="myBtn1">Read more</button>
+                   <table>
+                       <th>
+                           <input type="number" id="quantity" title="Enter quantity" placeholder=" Enter quantity" style="width: 80%;">
+                        </th>
+                        <th>
+                            <button id="quantityButton" onclick="AddToCartQuantity('Ventilators');" style="width: 80%;">Add to cart</button>
+                        </th>
+                    </table>
+                   
+                </div>
+                <div>
+                    <img src="../Images/2.jpg" style="width:100%">
+                    <h3>CT, PET/CT</h3>
+                    <p>Oncology accessories, slickers, and patient positioning aids help<span id="dots2">...</span><span id="more2" style="display: none;"> optimize exam accuracy and give patients a more pleasant experience.Our respiratory gating systems allow clinicians to track and monitor a patient's respiratory pattern during procedures.</span></p>
+                    <button onclick="myFunction('dots2','more2','myBtn2')" id="myBtn2">Read more</button>
+                    
+                </div>
+
+            </div>
+            <div class="column">
+                <div>
+                    <img src="../Images/3.jpg" style="width:100%">
+                    <h3>Diagnostic Cardiology</h3>
+                    <p>ECG electrodes, papers, and other supplies for productive and efficient care.<span id="dots3">...</span><span id="more3" style="display: none;">GE electrodes for patient monitoring and telemetry are designed to ensure positive contact with the skin and enable reliable connections with ECG leadwires. A broad family of electrodes includes configurations to accommodate a full range of patients and a variety of skin conditions.</span></p>
+                    <button onclick="myFunction('dots3','more3','myBtn3')" id="myBtn3">Read more</button>
+                    <table>
+                        <th>
+                            <input type="number" id="price" title="Enter price" placeholder=" Enter price" style="width: 80%;">
+                         </th>
+                         <th>
+                             <button id="priceButton" onclick="RFQ('Diagnostic Cardiology');" style="width: 100%;">RFQ</button>
+                         </th>
+                     </table>
+                </div>
+                <div>
+                    <img src="../Images/4.jpg" style="width:100%">
+                    <h3>X-ray</h3>
+                    <p>Radiation protection, drapes, and table accessories help clinicians increase <span id="dots4">...</span><span id="more4" style="display: none;"> patient throughput and improve exam quality. By providing easily accessible information about radiation exposure, RaySafe i2 allows staff to immediately change their behavior in order to minimize their radiation dose.</span></p>
+                    <button onclick="myFunction('dots4','more4','myBtn4')" id="myBtn4">Read more</button>
+                </div>
+            </div>  
+            <div class="column">
+                <div>
+                    <img src="../Images/5.jpg" style="width:100%">
+                    <h3>Mammography</h3>
+                    <p>SensorySuite™ patient experience, biopsy accessories, and furniture<span id="dots5">...</span><span id="more5" style="display: none;"> help create a more. comfortable patient experience and increase staff productivity. SensorySuite helps distract patients from the perceived discomfort, pain, and anxiety of a mammogram with three unique environmental ambiances to stimulate the senses.</span></p>
+                    <button onclick="myFunction('dots5','more5','myBtn5')" id="myBtn5">Read more</button>
+                </div>
+                <div>
+                    <img src="../Images/6.jpg" style="width:100%">
+                    <h3>Maternal Infant Care</h3>
+                    <p>Intrauterine pressure catheter and cables, fetal spiral electrodes and cables, .<span id="dots6">...</span><span id="more6" style="display: none;">and ECG recording papers for productive and efficient care. GE electrodes for patient monitoring and telemetry are designed to ensure positive contact with the skin and enable reliable connections with ECG leadwires. A broad family of electrodes includes configurations to accommodate a full range of patients and a variety of skin conditions.</span></p>
+                    <button onclick="myFunction('dots6','more6','myBtn6')" id="myBtn6">Read more</button>
+                </div>
+                
+            </div>
+            <div class="column">
+                <div>
+                    <img src="../Images/7.jpg" style="width:100%">
+                    <h3>MR</h3>
+                    <p>Patient monitors, coils, and patient positioning pads and aids help <span id="dots7">...</span><span id="more7" style="display: none;"> improve equipment performance and patient satisfaction. High-performance chillers for GE MR equipment supports your exam volumes and assures proper magnet function and long term reliability.</span></p>
+                    <button onclick="myFunction('dots7','more7','myBtn7')" id="myBtn7">Read more</button>
+                </div>
+                <div>
+                    <img src="../Images/8.jpg" style="width:100%">
+                    <h3>Patient Monitoring</h3>
+                    <p>ECG, cardiac output, invasive pressure, and temperature supplies for <span id="dots8">...</span><span id="more8" style="display: none;">productive and efficient care. GE’s high-quality, reusable ECG leadwires help you reliably make the correct connection to GE monitoring devices to enable accurate measurements.</span></p>
+                    <button onclick="myFunction('dots8','more8','myBtn8')" id="myBtn8">Read more</button>
+                </div>
+                
+            </div>  
+            <div class="column" id="a">
+                <div>
+                    <img src="../Images/9.jpg" style="width:100%" id="1">
+                    <h3>Ultrasound</h3>
+                    <p>Probe disinfection, biopsy accessories, gels, and probe covers and storage <span id="dots9">...</span><span id="more9" style="display: none;">help ensure patient throughput and staff productivity. Trophon EPR is an environmentally friendly proprietary technology that helps make the task of High-Level Disinfection of ultrasound transducers fast and more convenient.</span></p>
+                    <button onclick="myFunction('dots9','more9','myBtn9')" id="myBtn9">Read more</button>
+                </div>
+                <div>
+                    <img src="../Images/10.jpg" style="width:100%"id="2">
+                    <h3>UPS</h3>
+                    <p>Protect data, complete exams and avoid asset damage during power anomalies <span id="dots10">...</span><span id="more10" style="display: none;">with Uninterruptible Power Supplies (UPS). Help to eliminate power anomalies (noise, transients, over and undervoltage), which could damage the system's sensitive computer components</span></p>
+                    <button onclick="myFunction('dots10','more10','myBtn10')" id="myBtn10">Read more</button>
+                </div>
+                
+            </div>  
+            <div class="column"id="b">
+                <div>
+                    <img src="../Images/11.jpg" style="width:100%"id="3">
+                    <h3>Power Quality Offering</h3>
+                    <p>Service offerings include site evaluation, monitoring, turnkey installation,<span id="dots11">...</span><span id="more11" style="display: none;"> and service contracts. Facility power events are a leading cause of unscheduled downtime and can cause equipment damage. The iSense device provides 24x7 power monitoring, along with detailed reporting and immediate event alerts via email, cell phone and PDA. This data and information will allow for more accurate servicediagnostics, as well as identification of power protection needs.</span></p>
+                    <button onclick="myFunction('dots11','more11','myBtn11')" id="myBtn11">Read more</button>
+                </div>
+                <div>
+                    <img src="../Images/12.jpg" style="width:100%"id="4">
+                    <h3>DSG</h3>
+                    <p>Protect imaging devices from common, day-to-day power disturbances with <span id="dots12">...</span><span id="more12" style="display: none;">our Dynamic Sag Corrector. HC-DySC is designed specifically for the healthcare environment, is verified compatible with GE Healthcare products and corrects for voltage sags that can cause image degradation, data loss, trips or even equipment damage.</span></p>
+                    <button onclick="myFunction('dots12','more12','myBtn12')" id="myBtn12">Read more</button>
+                </div>
+                
+            </div> 
+        </div>
+
+    </body>
+
+    <footer>
+        <nav>
+            <a href="">Contact Us</a>
+            <span class="cpy">&copy2020 General Electric</span>
+            <a href="">Privacy Policy</a> 
+            <a href="">Terms and Conditions</a>
+            <a href="">Security</a> 
+            <a href="">Privacy Shield</a>   
+        </nav>
+    </footer>
+
+</html>
