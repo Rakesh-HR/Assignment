@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <title>GE Healthcare Registration</title>
+    <link href="../Stylesheets/RegFormNew.css" rel="stylesheet"> 
+    <script src="../Scriptsheets/UserData.js" ></script>
+    <link rel="stylesheet" href="../Stylesheets/UserData.css">
+
+    <header>
+        <div class="logo">
+            <a href="../HTML/RegFormNew.html"><img src="https://www.gehealthcare.com/-/jssmedia/6d5b64dcd4e44ad785909b3ab0d4b6c0.svg?la=en-US" alt="GE Logo" style="margin-left: 100px; margin-right: 100px;" id="img"></a>
+        </div>
+
+        <div class="toggle-content">
+            <label for="toggle">
+                <img src="../Images/more.png" alt="more icon">
+            </label>
+        </div>
+
+        <input type="checkbox" id="toggle">
+        <nav class="navbar" style=" font-family:GE Inspira Sans;">
+            <a href="">About Us</a>
+            <a href="../HTML/page2.html">Products</a>
+            <a href="">Shops</a>
+            <a href="../HTML/UserData.html">Insights</a>
+        </nav>
+    </header>
+
+    <body class="w3-container">
+        <br>
+        <div>
+            <button onclick="showIt()">View All Data</button>
+            <input type="text" id="itemId" placeholder="Enter the name of the record to be deleted or updated" style="width: 700px;"/>
+            <button onclick="deleteIt()">Delete Record</button>
+            <button onclick="updateIt()">Update Record</button>
+        </div>
+        <br>
+         <table id="id01" class="w3-table-all">
+          <tr>
+            <th>Name</th>
+            <th>Email ID</th>
+            <th>Age</th>
+            <th>Ph No</th>
+          </tr>
+        </table>
+        
+        <script>
+        
+        </script> 
+    </body>     
+
+    <footer>
+        <nav>
+            <a href="">Contact Us</a>
+            <span class="cpy">&copy2020 General Electric</span>
+            <a href="">Privacy Policy</a> 
+            <a href="">Terms and Conditions</a>
+            <a href="">Security</a> 
+            <a href="">Privacy Shield</a>   
+        </nav>
+    </footer>
+</html>

@@ -283,8 +283,6 @@ function submitValidator(){
     var cityS=document.getElementById("selectCity").value;
     var pinno = document.getElementById("pinNo").value;
     
-
-
     if(a1==""||a1==null||a2==""||a2==null||a3==""||a3==null||countryS=="Select Country"||stateS=="Select State"||cityS=="Select City"||pinno==""||pinno==null||no == "" || no== null || age == "" || age== null || name == "" || name== null || email == "" || email== null ||password1==""||password1==null ||password2==""||password2==null)
     {
       psswrd1Check();
@@ -303,9 +301,25 @@ function submitValidator(){
      // alert("\n Name : "+name+"\n Ph. No : "+no+"\n Age : "+age+"\n Email Id : "+email)
         
         btn.onclick = function() {
+
             modal.style.display = "block";
             document.getElementById("finalText1").innerHTML="Name : "+name+"\n Ph. No : "+no+"\n Age : "+age+"\n Email Id : "+email;
             document.getElementById("finalText2").innerHTML=`Your Address is: ${a1}, ${a2}, ${a3}, ${cityS}, ${pinno}`
+           
+            const data = {
+                "name": name,
+                "email": email,
+                "age":age,
+                "phno":no
+            };
+              const options = {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+              };
+              fetch('http://localhost:3000/api/FormData', options); 
             document.getElementById("nextPage").type="submit"
         }
 
@@ -316,7 +330,11 @@ function submitValidator(){
             }
         }
     }
+    
 }
 
 
 
+      
+    
+    
